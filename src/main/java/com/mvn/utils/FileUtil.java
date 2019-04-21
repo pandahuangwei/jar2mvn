@@ -1,8 +1,5 @@
 package com.mvn.utils;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -16,7 +13,7 @@ import java.util.List;
  * @since 2019-04-20 22:29.
  */
 public class FileUtil {
-    private static Logger logger = LoggerFactory.getLogger(FileUtil.class);
+
     private static final String TYPE_JAR = "jar";
     private static final String GROUPID_BEGIN = "<groupId>";
     private static final String GROUPID_END = "</groupId>";
@@ -50,7 +47,7 @@ public class FileUtil {
 
         }
         if (files == null) {
-            logger.error("没有文件");
+            System.out.println("没有文件");
             return;
         }
         for (File a : files) {

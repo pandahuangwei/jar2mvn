@@ -1,8 +1,5 @@
 package com.mvn.utils;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * 获取CPU核数
  *
@@ -12,7 +9,6 @@ import org.slf4j.LoggerFactory;
  */
 public class SystemUtil {
     private static final int DEFAULT_PROCESSORS_NUM = 4;
-    private static Logger logger = LoggerFactory.getLogger(TaskManager.class);
 
     public static int getProcessorCount() {
         String number = System.getenv("NUMBER_OF_PROCESSORS");
@@ -21,7 +17,7 @@ public class SystemUtil {
                 return Integer.parseInt(number);
             }
         } catch (Exception e) {
-            logger.warn("can't getProcessorCount,use defaut:" + DEFAULT_PROCESSORS_NUM);
+            System.out.println("can't getProcessorCount,use defaut:" + DEFAULT_PROCESSORS_NUM);
         }
 
         return DEFAULT_PROCESSORS_NUM;
