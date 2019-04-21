@@ -34,9 +34,9 @@ public class ReadMvnApplication {
 
     public static void main(String[] args) {
         //单线程搜索读取jar对应的pom
-        // List<Dependency> dependencies = readSingleThread();
+         List<Dependency> dependencies = readSingleThread();
         //多线程搜索读取jar对应的pom
-        List<Dependency> dependencies = readMultiThread();
+        // List<Dependency> dependencies = readMultiThread();
         writeTxt(dependencies);
     }
 
